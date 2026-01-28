@@ -47,6 +47,11 @@
      font-size: 56px;
  }
 
+ p{
+    text-align:justify;
+    font-size: medium;
+ }
+
  @media only screen and (min-width: 992px) and (max-width: 1199px) {
      h1 {
          font-size: 46px;
@@ -11182,6 +11187,33 @@
      text-align: left;
      float: right;
  }
+   /*=============================================
+=         our solution added          =
+=============================================*/
+.technology-service-bg .solution-section h5 {
+    color: white !important;
+}
+
+.technology-service-area h5 {
+    color: #fff !important;
+}
+
+.section-title h3, .section-title h5 {
+    color: white !important;
+}
+
+.multi-line.indented {
+    white-space: normal !important;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding-left: 0px; /* Indent for bullet alignment */
+    text-indent: -20px; /* Pull bullet back to align with other list items */
+    margin-left: 20px;  /* Container indent */
+}
+
+/* Alternative: Perfect bullet alignment */
+
 
   /*=============================================
 =         our services           =
@@ -11189,56 +11221,67 @@
 .side-by-side-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.25rem; /* Reduced from 0.5rem */
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0.25rem 0; /* Reduced from 0.5rem */
 }
 
 .side-by-side-grid li {
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 0.125rem 0; /* Reduced from 0.25rem */
 }
 
 @media (max-width: 768px) {
     .side-by-side-grid {
         grid-template-columns: 1fr;
+        gap: 0.125rem; /* Reduced from 0.25rem */
     }
 }
+
 .services-grid {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    margin-bottom: 5px !important; /* Reduced from 10px */
+    padding: 0.5rem; /* Reduced from 1rem */
 }
 
 .services-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 0.5rem; /* Reduced from 1rem */
+    margin-top: 0.5rem; /* Reduced from 1rem */
 }
 
 .service-card {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 6px; /* Reduced from 8px */
+    padding: 0.75rem; /* Reduced from 1rem */
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Reduced hover effect */
 }
 
 .icon-placeholder {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Reduced from 2.5rem */
+    margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+}
+
+.icon-imgplaceholder {
+    width: 48px; /* Reduced from 56px */
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem; /* Reduced bottom margin */
 }
 
 .service-card h6 {
-    font-size: 1.2rem;
-    margin: 0 0 1rem 0;
+    font-size: 1rem; /* Reduced from 1.1rem */
+    margin: 0 0 0.5rem 0; /* Reduced from 0.75rem */
     font-weight: bold;
 }
 
@@ -11247,12 +11290,12 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Reduced from 0.85rem */
 }
 
 .service-details li {
-    margin: 0.25rem 0;
-    padding-left: 1rem;
+    margin: 0.125rem 0; /* Reduced from 0.2rem */
+    padding-left: 0.75rem; /* Reduced from 1rem */
     position: relative;
 }
 
@@ -11266,16 +11309,18 @@
 @media (max-width: 768px) {
     .services-cards {
         grid-template-columns: 1fr;
+        gap: 0.5rem; /* Reduced from 0.75rem */
+    }
+    
+    .services-grid {
+        padding: 0.5rem; /* Reduced from 0.75rem */
+    }
+    
+    .service-card {
+        padding: 0.5rem; /* Reduced from 0.75rem */
     }
 }
 
-.icon-imgplaceholder {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;  /* Keeps image proportions, fits within 64x64 box */
-    display: block;
-    margin: 0 auto 1rem;
-}
  /*=============================================
 =         31. Testimonial slider Css           =
 =============================================*/
@@ -14400,6 +14445,39 @@
      right: 25px;
  }
 
+.single-line-list {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-bottom: 20px;
+    
+}
+
+ /*=============================================
+=        Why Choose           =
+=============================================*/
+
+
+.single-line-list li {
+    white-space: nowrap;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 4px 0;
+    text-align: justify; /* Added for justified text */
+    text-justify: inter-word; /* Ensures proper justification */
+    hyphens: auto; /* Optional: adds hyphens for better justification */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .single-line-list li {
+        white-space: normal;
+        font-size: 15px;
+        text-align: justify; /* Keep justification on mobile */
+    }
+}
+
  /*=============================================
 =        38. Resolutions home Css             =
 =============================================*/
@@ -14971,6 +15049,7 @@
      display: block;
      padding-top: 67%;
  }
+
 
  /*=======================================
 =           Careers Job Listing         = 
@@ -16474,8 +16553,9 @@
          line-height: 40px;
      }
      .software-innovation-hero-text {
-         text-align: center;
+         text-align:left ;
      }
+     
  }
 
  .modal.fade .modal-dialog {
@@ -16573,8 +16653,12 @@
 }
 
 
+
 /* Mobile styles for Contact Us section (#contact footer) */
 @media (max-width: 767px) {
+
+   
+
   #contact .footer-area {
     padding: 40px 15px 20px !important;
   }
@@ -16646,6 +16730,53 @@
   }
 }
 
+
+
+#solutions {
+    scroll-margin-top: 100px; /* Adjust this value based on your header's height */
+    padding-bottom:50px;
+
+}
+
+#services{
+    scroll-margin-top: 100px; /* Adjust this value based on your header's height */
+}
+
+
+
+/* 1. Desktop View: Keep your 200px margin */
+@media only screen and (min-width: 992px) {
+    .slide-image-container {
+        margin-left: 200px;
+    }
+}
+
+/* 2. Tablet View: Reduce margin so it doesn't break the layout */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .slide-image-container {
+        margin-left: 50px;
+    }
+}
+
+/* 3. Mobile View: Remove margin and center image */
+@media only screen and (max-width: 767px) {
+    .slide-image-container {
+        margin-left: 0 !important; /* Forces the removal of the margin */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .software-innovation-hero-image {
+        margin-top: 20px;
+        max-width: 80%; /* Keeps the image from touching screen edges */
+    }
+    
+    /* Ensures the "white-space: nowrap" doesn't push the image */
+    .info-heading {
+        white-space: normal !important;
+    }
+}
 /*
 /* Mobile styles for Our Services section (#services) 
 @media (max-width: 767px) {
@@ -16755,3 +16886,4 @@
 }
 
 */
+
